@@ -27,7 +27,16 @@ class BaseCtl(ABC):
             if self.input_validation():
                 return self.display(request, params)
             else:
-                return self.submit(request, params)
+                if (request.POST.get("operation") == "delete"):
+                    return self.deleteRecord(request, params)
+                elif (request.POST.get("operation") == "next"):
+                    return self.next(request, params)
+                elif (request.POST.get("operation") == "previous"):
+                    return self.previous(request, params)
+                elif (request.POST.get("operation") == "new"):
+                    return self.new(request, params)
+                else:
+                    return self.submit(request, params)
 
     @abstractmethod
     def display(self, request, params={}):
