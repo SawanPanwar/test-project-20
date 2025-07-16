@@ -20,6 +20,7 @@ class BaseCtl(ABC):
         pass
 
     def execute(self, request, params={}):
+        self.preload(request, params)
         if "GET" == request.method:
             return self.display(request, params)
         elif "POST" == request.method:
