@@ -9,6 +9,8 @@ from .ctl.UserCtl import UserCtl
 from .ctl.UserListCtl import UserListCtl
 from .ctl.RoleCtl import RoleCtl
 from .ctl.RoleListCtl import RoleListCtl
+from .ctl.CollegeCtl import CollegeCtl
+from .ctl.CollegeListCtl import CollegeListCtl
 
 
 @csrf_exempt

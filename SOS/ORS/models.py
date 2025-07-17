@@ -24,3 +24,26 @@ class Role(models.Model):
 
     class Meta:
         db_table = 'sos_role'
+
+
+class College(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    city = models.CharField(max_length=20)
+    phoneNumber = models.CharField(max_length=20)
+
+    class Meta:
+        db_table = 'sos_college'
+
+
+class Course(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.CharField(max_length=100)
+    duration = models.CharField(max_length=100)
+
+    class Meta:
+        db_table = 'sos_course'
+
+
+

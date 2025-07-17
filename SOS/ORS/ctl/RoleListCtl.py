@@ -35,7 +35,7 @@ class RoleListCtl(BaseCtl):
         return res
 
     def new(self, request, params={}):
-        res = redirect("/ORS/RoleList/")
+        res = redirect("/ORS/Role/")
         return res
 
     def deleteRecord(self, request, params={}):
