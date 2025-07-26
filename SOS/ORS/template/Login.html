@@ -10,7 +10,11 @@
     {% csrf_token %}
     <div align="center">
         <h1>Login</h1>
-        <h3><font color="red">{{ form.message }}</font></h3>
+        {% if form.error %}
+        <h3><font color="red"> {{ form.message }} </font></h3>
+        {% else %}
+        <h3><font color="green"> {{ form.message }} </font></h3>
+        {% endif %}
         <table>
             <tr>
                 <th>Login ID:</th>

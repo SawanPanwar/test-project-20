@@ -37,7 +37,7 @@ class LoginCtl(BaseCtl):
         user = self.get_service().authenticate(self.form)
         if (user is None):
             self.form['error'] = True
-            self.form["messege"] = "Login ID & Password is Invalid"
+            self.form["message"] = "Login ID & Password is Invalid"
             res = render(request, self.get_template(), {"form": self.form})
         else:
             request.session["user"] = user.firstName

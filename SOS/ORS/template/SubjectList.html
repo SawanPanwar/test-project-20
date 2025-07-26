@@ -31,7 +31,7 @@
 
         <table border="1%" width="100%">
             <tr>
-                <th><input type="checkbox"></th>
+                <th><input type="checkbox" id="selectall"></th>
                 <th>S. No.</th>
                 <th>Subject</th>
                 <th>Description</th>
@@ -40,7 +40,7 @@
             </tr>
             {% for l in pageList %}
             <tr>
-                <td align="center"><input type="checkbox" name="ids" value="{{ l.id }}"></td>
+                <td align="center"><input type="checkbox" class="case" name="ids" value="{{ l.id }}"></td>
                 <td align="center">{{ form.index|add:forloop.counter }}</td>
                 <td align="center">{{ l.name }}</td>
                 <td align="center">{{ l.description }}</td>
