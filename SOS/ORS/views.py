@@ -24,6 +24,8 @@ from .ctl.StudentCtl import StudentCtl
 from .ctl.StudentListCtl import StudentListCtl
 from .ctl.TimeTableCtl import TimeTableCtl
 from .ctl.TimeTableListCtl import TimeTableListCtl
+from .ctl.ForgetPasswordCtl import ForgetPasswordCtl
+from .ctl.ChangePasswordCtl import ChangePasswordCtl
 
 
 @csrf_exempt

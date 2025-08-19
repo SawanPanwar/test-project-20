@@ -14,6 +14,23 @@ class User(models.Model):
     roleId = models.IntegerField()
     roleName = models.CharField(max_length=50)
 
+    def to_json(self):
+        data = {
+            'id': self.id,
+            'firstName': self.firstName,
+            'lastName': self.lastName,
+            'loginId': self.loginId,
+            'password': self.password,
+            'confirmPassword': self.confirmPassword,
+            'dob': self.dob.strftime('%Y-%m-%d'),
+            'address': self.address,
+            'gender': self.gender,
+            'mobileNumber': self.mobileNumber,
+            'roleId': self.roleId,
+            'roleName': self.roleName
+        }
+        return data
+
     class Meta:
         db_table = 'sos_user'
 
